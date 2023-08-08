@@ -11,7 +11,7 @@
 }
 
 /* Start of movies area */
-@keyframes rott {
+@keyframes rot {
     50% {
         transform: rotate(180deg);
         background-color: var(--lite-Dark-color);
@@ -23,7 +23,7 @@
     }
 }
 
-@keyframes rott-rev {
+@keyframes rot-rev {
     50% {
         transform: rotate(-180deg);
     }
@@ -33,7 +33,7 @@
     }
 }
 
-@keyframes logrott {
+@keyframes logrot {
     0% {
         -moz-transform: rotateY(0deg);
         -webkit-transform: rotateY(0deg);
@@ -145,7 +145,6 @@ nav .user-btn span:nth-last-child(2):hover {
     nav {
         font-size: .9em;
         transform: translateX(-87%);
-        /* background-color: red; */
     }
 
     nav .logo p {
@@ -188,8 +187,7 @@ nav .user-btn span:nth-last-child(2):hover {
 
     nav {
         font-size: 1.2em;
-        /* transform: translateX(-94%); */
-        /* background-color: blue; */
+        transform: translateX(-94%);
     }
 
 }
@@ -203,7 +201,7 @@ nav .user-btn span:nth-last-child(2):hover {
 /* Start Camel*/
 .camel {
     position: relative;
-    /* background-color: green; */
+    background-color: green;
     width: 100vw;
     top: 34vh;
 }
@@ -225,7 +223,6 @@ nav .user-btn span:nth-last-child(2):hover {
 .icons {
     width: 300px;
     height: 350px;
-    /* background-color: #01b1fd; */
     position: absolute;
     left: calc(35% + 100px);
     top: -150px;
