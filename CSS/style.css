@@ -1,0 +1,494 @@
+/* Start Global Variables */
+:root {
+    --padding--: 60px;
+    --main-color: #13fec5;
+    --secondary-color: #e6d706;
+    --third-color: #5b7979;
+    --fourth-color: #fa319f;
+    --fifth-color: #01b1fd;
+    --lite-Dark-color: #325d79;
+    --Dark-color: #1c1a1f;
+}
+
+/* Start of movies area */
+@keyframes rott {
+    50% {
+        transform: rotate(180deg);
+        background-color: var(--lite-Dark-color);
+        color: var(--main-color);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rott-rev {
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes logrott {
+    0% {
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        -moz-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        -moz-transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+/* End of movies area */
+/* End Global Variables */
+
+/* Start Main */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "cairo", serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #90a5a4 48vh, rgb(184 151 118) calc(52vh + 150px));
+    width: 100vw;
+    height: 100vh;
+    min-width: 360px;
+}
+
+/* End Main */
+
+/* Start Style */
+/* Start Navigation Bar */
+nav {
+    height: 60px;
+    width: 100vw;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--third-color);
+    font-size: 1.5em;
+    transition: 2s;
+    border-radius: 10px;
+    min-width: 360px;
+}
+
+nav:hover {
+    transform: translateX(0%);
+}
+
+nav .logo {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+nav .logo img {
+    width: 48px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    animation: logrot 2s linear infinite;
+    -webkit-animation: logrot 2s linear infinite;
+    -moz-animation: logrot 2s linear infinite;
+}
+
+nav .logo p {
+    margin: 20px;
+}
+
+nav .user-btn {
+    margin: 20px;
+    height: fit-content;
+}
+
+nav .user-btn span {
+    margin: 15px;
+    padding: 0px 20px;
+    background-color: var(--third-color);
+    color: var(--main-color);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+nav .user-btn span:hover {
+    box-shadow: 1px 1px 10px 5px var(--fourth-color);
+}
+
+nav .user-btn span:nth-last-child(2):hover {
+    box-shadow: 1px 1px 10px 5px var(--fifth-color);
+}
+
+/* looking for width */
+@media screen and (max-width : 640px) {
+
+    nav {
+        font-size: .9em;
+        transform: translateX(-87%);
+        /* background-color: red; */
+    }
+
+    nav .logo p {
+        display: none;
+    }
+}
+
+/* mobile version */
+@media screen and (min-width : 320px)and (max-width : 480px) {
+
+    nav {
+        font-size: .2em;
+        transform: translateX(-80%);
+    }
+
+    .icons .cycle {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav .logo p {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: 1em !important;
+    }
+
+    section .dunes {
+        top: 520px;
+    }
+
+}
+
+@media screen and (min-width : 641px) {
+
+    nav {
+        font-size: 1.2em;
+        /* transform: translateX(-94%); */
+        /* background-color: blue; */
+    }
+
+}
+
+/* End Navigation Bar*/
+/* Start Main Body*/
+/* Start Sun*/
+/* End Sun*/
+/* Start Moon*/
+/* End Moon*/
+/* Start Camel*/
+.camel {
+    position: relative;
+    /* background-color: green; */
+    width: 100vw;
+    top: 34vh;
+}
+
+.camel .video {
+    position: relative;
+}
+
+.camel .video video {
+    position: absolute;
+    transform: translateX(-50%) rotateY(180deg);
+    width: 350px;
+    left: 50%;
+}
+
+/* End Camel*/
+/* Start Cyclic icons*/
+/* End Cyclic icons*/
+.icons {
+    width: 300px;
+    height: 350px;
+    /* background-color: #01b1fd; */
+    position: absolute;
+    left: calc(35% + 100px);
+    top: -150px;
+    z-index: 3;
+}
+
+@media screen and (min-width : 366px) and (max-width : 800px) {
+
+    .icons {
+        left: calc(35% + 50px);
+    }
+
+    .icons .cycle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icons .cycle {
+        transform-origin: 10px 10px;
+    }
+}
+
+@media screen and (max-width : 365px) {
+
+    .icons {
+        left: calc(25%);
+    }
+
+    .icons .cycle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icons .cycle {
+        transform-origin: center center;
+    }
+
+    .cycle.one {
+        top: 100px;
+        left: 50px;
+    }
+
+    .cycle.two {
+        top: 50px;
+        left: 100px;
+    }
+
+    .cycle.three {
+        top: 0px;
+        left: 100px;
+    }
+
+    .cycle.four {
+        top: 50px;
+        left: 0px;
+    }
+
+    .cycle.five {
+        top: 100px;
+        left: 0px;
+    }
+
+    .cycle.six {
+        top: 150px;
+        left: 50px;
+    }
+
+}
+
+
+
+.icons .cycle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    border: 5px solid transparent;
+    box-shadow: 0px 0px 10px var(--third-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.cycle.one {
+    top: 190px;
+    left: 200px;
+}
+
+.cycle.two {
+    top: 70px;
+    left: 200px;
+}
+
+.cycle.three {
+    top: 0px;
+    left: 100px;
+}
+
+.cycle.four {
+    top: 80px;
+    left: 0px;
+}
+
+.cycle.five {
+    top: 190px;
+    left: 0px;
+}
+
+.cycle.six {
+    top: 250px;
+    left: 100px;
+}
+
+
+.icons:hover+.cycle {
+    animation-play-state: paused;
+}
+
+.icons .cycle:hover {
+    animation-play-state: paused;
+    transition: 0.5s;
+    background-color: yellow !important;
+    border: 15px var(--fourth-color);
+    box-shadow: 0px 0px 20px 15px var(--fourth-color);
+    cursor: pointer;
+
+}
+
+.icons .cycle:hover div {
+    animation-play-state: paused;
+}
+
+
+.cycle.one {
+    animation: rot 12s linear infinite -12s;
+    transform-origin: -50px bottom;
+}
+
+.cycle.two {
+    animation: rot 12s linear infinite -10s;
+    transform-origin: -50px bottom;
+}
+
+.cycle.three {
+    animation: rot 12s linear infinite -8s;
+    transform-origin: -50px bottom;
+}
+
+.cycle.four {
+    animation: rot 12s linear infinite -6s;
+    transform-origin: -50px bottom;
+}
+
+.cycle.five {
+    animation: rot 12s linear infinite -4s;
+    transform-origin: -50px bottom;
+}
+
+.cycle.six {
+    animation: rot 12s linear infinite -2s;
+    transform-origin: -50px bottom;
+}
+
+.icons .origin {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-150px, bottom);
+}
+
+.cycle.one div {
+    animation: rot-rev 12s linear infinite -12s;
+}
+
+.cycle.two div {
+    animation: rot-rev 12s linear infinite -10s;
+}
+
+.cycle.three div {
+    animation: rot-rev 12s linear infinite -8s;
+}
+
+.cycle.four div {
+    animation: rot-rev 12s linear infinite -6s;
+}
+
+.cycle.five div {
+    animation: rot-rev 12s linear infinite -4s;
+}
+
+.cycle.six div {
+    animation: rot-rev 12s linear infinite -2s;
+}
+
+.cycle div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cycle div img {
+    width: 50%;
+}
+
+.cycle.three {
+    font-size: 12px !important;
+}
+
+/* Start dunes*/
+.dunes {
+    float: left;
+    width: 100vw;
+    height: 165px;
+    overflow: hidden;
+    background-position: bottom;
+    position: absolute;
+    top: 460px;
+}
+
+.dunes img {
+    width: 100vw;
+    height: 450px;
+    display: flex;
+    position: absolute;
+    bottom: -50px;
+}
+
+/* End dunes*/
+
+/* End Main Body*/
+/* Start Footer*/
+footer {
+    width: 100vw;
+    height: 7vh;
+    position: absolute;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img:nth-child(1) {
+    cursor: pointer;
+    height: 30px;
+}
+
+footer p {
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--Dark-color);
+}
+
+footer .whats {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+}
+
+/* End Footer*/
+/* End Style*/
